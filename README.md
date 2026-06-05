@@ -1,4 +1,4 @@
-## 🚀 Go-Distributed-GameOfLife
+## Go-Distributed-GameOfLife
 
 This project implements **Conway's Game of Life** as a **highly scalable, distributed system** using **Go (Golang)**. The primary focus is on achieving **high-performance simulation** across multiple machines using a **Controller/Server/Worker** architecture and Go's native support for network communication via **RPC (Remote Procedure Call)**.
 
@@ -15,7 +15,7 @@ Conway's Game of Life is a zero-player game whose evolution is determined solely
 
 This project's implementation focuses on distributing these intense computations across multiple remote nodes using the Controller/Server/Worker model to break through the computing power bottleneck of a single machine.
 
-## 📝 Final Coursework Report
+## Final Coursework Report
 
 The full detailed analysis of the distributed implementation, including performance benchmarks and design rationale, is available in the final report.
 
@@ -23,9 +23,9 @@ The full detailed analysis of the distributed implementation, including performa
 
 **Click the image to view the full report.**
 
-## 💡 System Architecture: Controller-Server-Worker
+## System Architecture: Controller-Server-Worker
 
-The simulation logic is split into three main, network-connected components—the **Local Controller** and the **Remote Engine (Server/Worker)**—to maximize performance and scalability.
+The simulation logic is split into three main, network-connected components—the **Local Controller** and the **Remote Engine (Server/Worker)**—to maximise performance and scalability.
 
 ### Overall Distributed System Architecture
 
@@ -41,7 +41,7 @@ This diagram illustrates the full distributed setup, showing the **Local Control
 
 > **Note on Broker Role:** In the current implementation, the **Local Controller** handles the scheduling and result aggregation roles. A dedicated Broker component for managing worker pools and fault tolerance was part of the original design, but is functionally handled by the Controller.
 
-## 🌟 Key Features & Implementation Highlights
+## Key Features & Implementation Highlights
 
 ### 1\. High-Performance Distributed Core
 
@@ -75,7 +75,7 @@ The core distributed architecture was successfully established within the **`Sta
   * **Controller-Server Connection:** The Controller successfully connects to remote Servers using `rpc.Dial` and executes remote functions via `client.call()`.
   * **Boundary Cell Dependency:** The issue of boundary cells missing neighbouring rows was solved by embedding the **`HaloUpper`** and **`HaloLower`** data within the `WorkerRequest` for every turn's calculation.
 
-## 📈 Performance and Scalability
+## Performance and Scalability
 
 The distributed architecture is optimised for **horizontal scaling**. Benchmarks were conducted on a 20-core Linux machine using a $512 \times 512$ grid over 1000 turns.
 
@@ -106,7 +106,7 @@ This shows the simulation running in real-time via the SDL window.
 
 ![Preview](https://github.com/Jen0821/Distributed-GameOfLife/blob/main/SDL-Visualisation.jpg)
 
-## ▶️ Setup
+## Setup
 
 ### **Prerequisites**
 
@@ -131,7 +131,7 @@ sudo apt-get install libsdl2-dev
 # Refer to the Go SDL documentation for detailed platform-specific setup
 ```
 
-## 🚀 Running and Testing
+## Running and Testing
 
 ### Run the program (Controller/Server assumed running or mocked)
 
